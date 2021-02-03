@@ -53,20 +53,20 @@ like cross browser testing etc, page responsive and Adding more debug logs for i
 
    I have used function to collect entered email to check with fetch API and throws error status if the email is not present in the Database.
 
-   export function forgotPasswordAjax(email) {
-   return async dispatch => {
-   const response = await Client.forgotPassword(email);
-   try {
-   if (response.status === 'error') {
-   dispatch(showErrorToast(response.message));
-   } else {
-   await dispatch(forgotPasswordSuccess());
-   }
-   } catch (error) {
-   dispatch(showErrorToast(error));
-   }
-   };
-   }
+            export function forgotPasswordAjax(email) {
+            return async dispatch => {
+            const response = await Client.forgotPassword(email);
+            try {
+            if (response.status === 'error') {
+            dispatch(showErrorToast(response.message));
+            } else {
+            await dispatch(forgotPasswordSuccess());
+            }
+            } catch (error) {
+            dispatch(showErrorToast(error));
+            }
+            };
+            }
 
 3. How would you track down a performance issue in production?
    Have you ever had to do this?
