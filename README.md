@@ -79,3 +79,8 @@ like cross browser testing etc, page responsive and Adding more debug logs for i
 5. Please describe yourself using JSON.
    I am very comfortable with JSON parsing in javascript.
    JSON api is available in javascript, where it is simply an object and it allows for clean and maintainable code.
+
+6. Added Screenshot of Lighthoue Audit
+
+![alt text](https://github.com/srpari/RestaurantSearch/blob/main/Captured_LightHouse.PNG?raw=true)
+
