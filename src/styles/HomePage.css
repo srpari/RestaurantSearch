@@ -1,0 +1,37 @@
+button {
+  align-items: center;
+  background-color: #dbbc33;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+  color: #000;
+  font-family: Georgia;
+  margin: 0 auto;
+  margin-top: 0.2em;
+  display: block;
+  font-size: 17px;
+  width: 10em;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+/* button {
+  width: 10em;
+  padding: 0.5em;
+  font-size: 1.6vw;
+  background: #dbbc33;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.7em;
+  border: 1px solid rgba(20, 20, 20, 0.5);
+  border-radius: 0.2em;
+} */
+
+button:focus {
+  outline: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #e7c83b;
+}

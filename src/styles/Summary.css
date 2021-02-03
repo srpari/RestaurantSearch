@@ -1,0 +1,22 @@
+.page-header {
+  background-color: #f7f7f7;
+  padding: 0.2rem 0;
+  margin-bottom: 2.2rem;
+}
+.page-header__title {
+  text-align: center;
+  font-weight: 300;
+  margin: 0;
+  margin-top: 0.3em;
+}
+
+/* Accessibility and labels  */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
