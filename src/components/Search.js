@@ -9,26 +9,32 @@ const Search = (props) => {
   console.log('Search comp props', props);
   return (
     <div className='content-container content'>
-      <div className='page-header'>
-        <label htmlFor="header-search">
+      <div className='page-header' tabIndex="0">
         <span className="visually-hidden">Select city</span>
-        </label>
-        <h2 className="page-header__title">Select city</h2>
+        <h2 className="page-header_title">Select city</h2>
       </div>
      
-      <div className='button-container'>
+      {/* <div className='button-container'> */}
         {
           props.city.map((item, index)=>{
-            return <button key={index} 
+            return <>
+            <button id={index} key={index} aria-label={item} className = 'cypress-wrapper'  
               onClick={(e)=>{
               props.dispatch(resetState());
               props.dispatch(setCity(e.target.innerText));
               props.dispatch(thunkRestaurants(e.target.innerText, 1));
               props.history.push('/listing');
-            }} >{item}</button>
+            }} >  
+              {item}
+              </button>
+              {/* Simulation for simple accessability testing */}
+              <div className="cypress-wrapper visually-hidden" aria-hidden="true">
+                  Intentional Failure for A11Y
+              </div>
+            </>
           })
         }
-      </div>
+      {/* </div> */}
     </div>
   )
 }

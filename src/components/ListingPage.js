@@ -36,15 +36,14 @@ class ListingPage extends Component {
       {error ?<p>{error}</p>:
         <div>
           <div className='content-container outline page-header'>
-            <h2 className="page-header__title"><small>Showing restaurants in </small>"<strong>{this.props.city}</strong>"</h2>
+            <h2 tabIndex="0" aria-label="Results" className="page-header_title"><small>Showing restaurants in </small>"<strong>{this.props.city}</strong>"</h2>
           </div>
           <InfiniteScroll
               dataLength={this.props.restaurants.length}
               next={this.onScroll}
               hasMore={true}
               loader={<LoadingComponent />}>
-              {
-              
+              {              
                 this.props.restaurants.map((rest, index) =>{
                   return <RestaurantListItem key={index} {...rest}  likes={this.props.likes} {...this.props}/>
                 })

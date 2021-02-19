@@ -1,7 +1,7 @@
 const defaultState={
     city:'', 
     restaurants:[],
-    likes: [],//likes will store list of res_id restaurant ids
+    likes: [],
     error: ''
 };
 
@@ -23,7 +23,7 @@ export const restaurantReducer = (state = defaultState, action) =>{
 
         case 'SET_LIKE':
             let likesArr=[];
-            if(!action.like){//not present --at the time of page load
+            if(!action.like){
                 likesArr= JSON.parse(localStorage.getItem('likes'));
             }
             else{

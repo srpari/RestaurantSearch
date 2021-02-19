@@ -5,8 +5,8 @@ import '../styles/Header.css';
 export default function Header() {
   return (
         <div className='App-name'>
-          <Link className="App-title" to='/'>
-			    	<h1>Find the best Restaurants in city</h1>
+          <Link className="App-title" autoFocus to='/'>
+			    	<h1 aria-label="title">Find the best Restaurants in city</h1>
           </Link>
         </div>
   )

@@ -29,9 +29,10 @@ button {
 
 button:focus {
   outline: 0;
+  background: #ebdfab;
 }
 
 button:hover {
   cursor: pointer;
-  background: #e7c83b;
+  background: #ebdfab;
 }

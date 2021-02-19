@@ -2,8 +2,8 @@
   "name": "restaurantfinder",
   "version": "0.1.0",
   "private": true,
-  "engines":{
-    "node":"12.x"
+  "engines": {
+    "node": "12.x"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cypress",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,5 +43,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^6.5.0",
+    "cypress-axe": "^0.12.1"
   }
 }

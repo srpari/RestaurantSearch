@@ -25,7 +25,7 @@ export const thunkRestaurants =(city='', start=1) =>{
             .then(handleErrors)
             .then(res => res.json() )
             .then((data) => {
-                console.log(data.restaurants);
+               // console.log(data.restaurants);
                 data.restaurants.forEach((restaurant) =>{
                     const res_id = restaurant.restaurant.id;
                     fetch(`https://developers.zomato.com/api/v2.1/reviews?res_id=${res_id}&apikey=${API_KEY}`)

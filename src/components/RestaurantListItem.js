@@ -13,15 +13,14 @@ const RestaurantListItem = (props)=> {
               <img src={props.restaurant.thumb || photo} alt='Thumbnail_Img_Restaurant' className='media-left__image'/></Link>
             </div>
             <div className='media-body'>
-            <Link to={`/detail/${props.restaurant.id}`} ><h3 className='restaurant-name res_name'>{props.restaurant.name}</h3> </Link>
-            
+            <Link to={`/detail/${props.restaurant.id}`} >
+              <h3 aria-label="RestaurantName" className='restaurant-name res_name'>{props.restaurant.name}</h3> </Link>
             <RestaurantItemBody 
             address={props.restaurant.location.address}
             cuisines={props.restaurant.cuisines}
             rating={props.restaurant.user_rating.aggregate_rating} 
             votes={props.restaurant.user_rating.votes} 
             reviews_count={props.review.reviews_count}/>   
-            {/* <RestaurantItemBody rating={props.restaurant.user_rating.aggregate_rating} votes={props.restaurant.user_rating.votes} reviews_count={props.review.reviews_count}/>        */}
             </div>
       </div>
     

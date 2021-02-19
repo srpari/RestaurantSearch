@@ -15,27 +15,27 @@ const DetailPage= (props) => {
   return (
     <div className='content-container content'>
         {/* Restaurant details with id of {props.match.params.id} */}
-        <img src={restaurant.featured_image || photo} alt='...' className='featured-image' />
-        <h3 className='restaurant-name'>
+        <img src={restaurant.featured_image || photo} alt='Restaurant-Image' className='featured-image' />
+        <h3 tabindex="0" aria-label="Restaurant-Name" className='restaurant-name'>
           {restaurant.name} 
         </h3>
 
-        <span className={decideColor(restaurant.user_rating.aggregate_rating)}>{restaurant.user_rating.aggregate_rating}</span>
-        <span> ({restaurant.user_rating.votes} votes)</span>
-        <span className='res_review' >| &nbsp;&nbsp; {review.reviews_count} reviews</span>  
+        <span tabIndex="0" aria-label="Rating" className={decideColor(restaurant.user_rating.aggregate_rating)}>{restaurant.user_rating.aggregate_rating}</span>
+        <span tabIndex="0" aria-label="Votes"> ({restaurant.user_rating.votes} votes)</span>
+        <span tabIndex="0" aria-label="Reviews" className='res_review' >| &nbsp;&nbsp; {review.reviews_count} reviews</span>  
         
 
         <hr />
 
-        <p><strong>Cuisines: </strong>{restaurant.cuisines}</p>
-        <p><strong>Cost for two:  </strong> {restaurant.currency}{restaurant.average_cost_for_two}</p>
+        <p tabIndex="0" aria-label="Cuisines" ><strong>Cuisines: </strong>{restaurant.cuisines}</p>
+        <p tabIndex="0" aria-label="Cost" ><strong>Cost for two:  </strong> {restaurant.currency}{restaurant.average_cost_for_two}</p>
         <hr />
 
-        <p><strong>Address:</strong></p>
-        <p>{restaurant.location.address}</p>
+        <p tabIndex="0" aria-label="Address" ><strong>Address:</strong></p>
+        <p tabIndex="0">{restaurant.location.address}</p>
         <hr />
 
-        <p><strong>Reviews</strong></p>
+        <p tabIndex="0" aria-label="Reviews"><strong>Reviews</strong></p>
         <UserReviews reviewsArr={reviewsArr} />
         <hr/>
         {/* <button onClick={(e) =>{
